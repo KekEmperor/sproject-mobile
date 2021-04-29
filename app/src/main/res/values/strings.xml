@@ -10,8 +10,13 @@
     <string name="login_activity_title">Увійти до системи</string>
     <string name="menu_activity_title">Меню</string>
     <string name="levels_activity_title">Показники та статистика</string>
+    <string name="messages_activity_title">Ваші повідомлення</string>
     <string name="levels_header">Перегляньте тут ваші показники та статистику про них!</string>
     <string name="week_average">Середнє значення рівня цукру в крові за останній тиждень</string>
     <string name="hour_average">Середнє значення рівня цукру на дану годину</string>
     <string name="date_time_formatter">dd.MM.yyyy HH:mm</string>
+    <string name="messages_header">Тут знаходяться повідомлення, що їх для вас залишив лікар - призначення, поради тощо</string>
+    <string name="measurement_button">Надіслати показники</string>
+    <string name="sender_header">Надішліть тут Ваш поточний рівень цукру в крові</string>
+    <string name="send">Надіслати</string>
 </resources>

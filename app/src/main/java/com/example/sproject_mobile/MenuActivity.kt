@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import io.ktor.client.features.*
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_menu.*
 
@@ -19,6 +20,16 @@ class MenuActivity : AppCompatActivity() {
 
         levelsButton.setOnClickListener() {
             val i = Intent(this, LevelsActivity::class.java)
+            startActivity(i)
+        }
+
+        messagesButton.setOnClickListener() {
+            val i = Intent(this, MessagesActivity::class.java)
+            startActivity(i)
+        }
+
+        measurementButton.setOnClickListener() {
+            val i = Intent(this, SenderActivity::class.java)
             startActivity(i)
         }
     }

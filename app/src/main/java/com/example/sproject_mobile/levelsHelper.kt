@@ -54,3 +54,21 @@ suspend fun getHourAverage(sp: SharedPreferences): Double {
         return average.toDouble()
     }
 }
+
+suspend fun sendMeasurements(sp: SharedPreferences, level: String): String {
+    HttpClient().use {
+        val data = it.post<HttpResponse>("http://10.0.2.2:30030/patient/sendMeasurements") {
+            body = TextContent(
+                "{\"patientId\": \"${sp.getString("patientId", "")}\"," +
+                        "\"level\": ${level}}",
+                ContentType.Application.Json
+            )
+            header("x-auth-token", sp.getString("token", ""))
+        }
+
+        if (data.status == HttpStatusCode.Created) {
+            return data.readText()
+        }
+        return ""
+    }
+}

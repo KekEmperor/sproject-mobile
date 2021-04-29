@@ -2,14 +2,16 @@ package com.example.sproject_mobile
 
 import android.graphics.Typeface
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_message.*
+import kotlinx.android.synthetic.main.fragment_message.view.*
+import java.time.LocalDate
+import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 
-// TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "dateTime"
 private const val ARG_PARAM2 = "text"
@@ -21,17 +23,16 @@ private const val ARG_PARAM3 = "isRead"
  * create an instance of this fragment.
  */
 class MessageFragment : Fragment() {
-    // TODO: Rename and change types of parameters
     private var dateTime: String? = null
     private var text: String? = null
-    private var isRead: String? = null
+    private var isRead: Boolean? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             dateTime = it.getString(ARG_PARAM1)
             text = it.getString(ARG_PARAM2)
-            isRead = it.getString(ARG_PARAM3)
+            isRead = it.getBoolean(ARG_PARAM3)
         }
     }
 
@@ -44,13 +45,15 @@ class MessageFragment : Fragment() {
         // Inflate the layout for this fragment
         root = inflater.inflate(R.layout.fragment_message, container, false)
 
+        val dateTimeParsed = ZonedDateTime.parse(dateTime)
         val dateTimeFormatted =
-            dateTime?.format(DateTimeFormatter.ofPattern(getString(R.string.date_time_formatter)))
-        dateTimeTextView.text = dateTimeFormatted
-        messageTextView.text = text
+            dateTimeParsed.format(DateTimeFormatter.ofPattern(getString(R.string.date_time_formatter)))
 
-        if (isRead == "Read") {
-            messageTextView.setTypeface(null, Typeface.BOLD)
+        root.dateTimeTextView.text = dateTimeFormatted
+        root.messageTextView.text = text
+
+        if (!isRead!!) {
+            root.messageTextView.setTypeface(null, Typeface.BOLD)
         }
 
         return root
@@ -66,14 +69,13 @@ class MessageFragment : Fragment() {
          * @param isRead isRead.
          * @return A new instance of fragment MessageFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(dateTime: String, text: String, isRead: String) =
+        fun newInstance(dateTime: String, text: String, isRead: Boolean) =
             MessageFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, dateTime)
                     putString(ARG_PARAM2, text)
-                    putString(ARG_PARAM3, isRead)
+                    putBoolean(ARG_PARAM3, isRead)
                 }
             }
     }
