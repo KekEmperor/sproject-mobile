@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">sproject-mobile</string>
+    <string name="phone_hint">Введіть номер телефону</string>
+    <string name="password_hint">Введіть пароль</string>
+    <string name="welcome_login">Увійдіть до системи як пацієнт</string>
+    <string name="login">Увійти</string>
+    <string name="levels_button">Показники</string>
+    <string name="messages_button">Повідомлення</string>
+    <string name="welcome_menu">Вітаємо, </string>
+    <string name="login_activity_title">Увійти до системи</string>
+    <string name="menu_activity_title">Меню</string>
+    <string name="levels_header">Перегляньте тут ваші показники та певну статистику про них!</string>
+</resources>
