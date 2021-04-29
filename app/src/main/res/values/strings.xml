@@ -9,5 +9,9 @@
     <string name="welcome_menu">Вітаємо, </string>
     <string name="login_activity_title">Увійти до системи</string>
     <string name="menu_activity_title">Меню</string>
-    <string name="levels_header">Перегляньте тут ваші показники та певну статистику про них!</string>
+    <string name="levels_activity_title">Показники та статистика</string>
+    <string name="levels_header">Перегляньте тут ваші показники та статистику про них!</string>
+    <string name="week_average">Середнє значення рівня цукру в крові за останній тиждень</string>
+    <string name="hour_average">Середнє значення рівня цукру на дану годину</string>
+    <string name="date_time_formatter">dd.MM.yyyy HH:mm</string>
 </resources>

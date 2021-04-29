@@ -14,7 +14,12 @@ import java.util.*
 
 suspend fun getGeneralAverage(sp: SharedPreferences): Double {
     HttpClient().use {
-        val data = it.get<HttpResponse>("http://10.0.2.2:30030/patient/weekAverage/" + sp.getString("patientId", "")) {
+        val data = it.get<HttpResponse>(
+            "http://10.0.2.2:30030/patient/weekAverage/" + sp.getString(
+                "patientId",
+                ""
+            )
+        ) {
             header("x-auth-token", sp.getString("token", ""))
         }
         var average = JSONObject()
@@ -32,11 +37,20 @@ suspend fun getHourAverage(sp: SharedPreferences): Double {
     val formatter = DateTimeFormatter.ofPattern("HH")
     val hour = now.format(formatter)
 
-    Log.i("abobba", hour)
+    HttpClient().use {
+        val data = it.get<HttpResponse>(
+            "http://10.0.2.2:30030/patient/hourLevel/" +
+                    sp.getString("patientId", "") + "/" + hour
+        ) {
+            header("x-auth-token", sp.getString("token", ""))
+        }
 
-    /*HttpClient().use {
-        val data = it.get<HttpResponse>("http://10.0.2.2:30030/patient")
-    }*/
+        var average: String = ""
+        if (data.status == HttpStatusCode.OK) {
+            average = data.readText()
+        }
 
-    return 42.0
+        Log.i("abobba", average)
+        return average.toDouble()
+    }
 }

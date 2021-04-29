@@ -18,6 +18,10 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        if (sp.getString("token", "") != "") {
+            moveToMenu(this)
+        }
+
         loginButton.setOnClickListener() {
             var status = ""
             GlobalScope.launch(Dispatchers.IO) {
@@ -36,10 +40,10 @@ class LoginActivity : AppCompatActivity() {
 
     private fun moveToMenu(context: Context) {
         val i = Intent(context, MenuActivity::class.java)
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(i);
-        finish();
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(i)
+        finish()
     }
 
     private fun showAlert() {

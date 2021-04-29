@@ -21,6 +21,7 @@ class LevelsActivity : AppCompatActivity() {
 
             runOnUiThread {
                 generalAverageTextView.text = generalAverage.toString()
+                hourAverageTextView.text = hourAverage.toString()
             }
         }
     }

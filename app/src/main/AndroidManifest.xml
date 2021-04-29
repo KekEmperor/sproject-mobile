@@ -12,7 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sprojectmobile"
         android:usesCleartextTraffic="true">
-        <activity android:name=".LevelsActivity" />
+        <activity android:name=".MessagesActivity"></activity>
+        <activity
+            android:name=".LevelsActivity"
+            android:label="@string/levels_activity_title"
+            android:parentActivityName=".MenuActivity" />
         <activity
             android:name=".MenuActivity"
             android:label="@string/menu_activity_title" />
