@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">sproject-mobile</string>
+    <string name="phone_hint">Enter a phone number</string>
+    <string name="password_hint">Enter a password</string>
+    <string name="welcome_login">Log in as a patient</string>
+    <string name="login">Log in</string>
+    <string name="levels_button">Levels</string>
+    <string name="messages_button">Messages</string>
+    <string name="welcome_menu">Welcome, </string>
+    <string name="login_activity_title">Log in to the system</string>
+    <string name="menu_activity_title">Menu</string>
+    <string name="levels_activity_title">Levels and statistics</string>
+    <string name="messages_activity_title">Your messages</string>
+    <string name="sender_activity_title">Send measurements</string>
+    <string name="critical_zones_activity_title">Critical zones</string>
+    <string name="levels_header">Here you can see your blood sugar levels and statistics about them</string>
+    <string name="week_average">Average blood sugar level for the last week</string>
+    <string name="hour_average">Average blood sugar level by this hour</string>
+    <string name="date_time_formatter">MM/dd/yyyy HH:mm</string>
+    <string name="date_formatter">MM/dd/yyyy</string>
+    <string name="time_formatter">HH:mm</string>
+    <string name="messages_header">Here you can see messages left by yout doctor - pieces of advice and so on</string>
+    <string name="measurement_button">Send the level</string>
+    <string name="sender_header">Send your current blood sugar level here</string>
+    <string name="send">Send</string>
+    <string name="crit_button">Critical zones</string>
+    <string name="crit_header">Here are your last critical zones. You must pay attention to them!</string>
+    <string name="crit_high">Critically high blood sugar level</string>
+    <string name="crit_low">Critically high blood sugar level</string>
+    <string name="last_levels">Your last levels</string>
+</resources>

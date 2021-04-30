@@ -31,12 +31,10 @@ class SenderActivity : AppCompatActivity() {
                         }
                         builder.show()
                     } else {
-                        runOnUiThread {
-                            val builder = AlertDialog.Builder(this@SenderActivity)
-                            builder.setTitle("Виникла помилка")
-                            builder.setMessage("Сталася невідома нам помилка. Будь ласка, спробуйте пізніше.")
-                            builder.show()
-                        }
+                        val builder = AlertDialog.Builder(this@SenderActivity)
+                        builder.setTitle("Виникла помилка")
+                        builder.setMessage("Сталася невідома нам помилка. Будь ласка, спробуйте пізніше.")
+                        builder.show()
                     }
                 }
             }

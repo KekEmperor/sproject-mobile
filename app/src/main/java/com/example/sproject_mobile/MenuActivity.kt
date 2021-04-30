@@ -32,6 +32,11 @@ class MenuActivity : AppCompatActivity() {
             val i = Intent(this, SenderActivity::class.java)
             startActivity(i)
         }
+
+        critButton.setOnClickListener() {
+            val i = Intent(this, CriticalZonesActivity::class.java)
+            startActivity(i)
+        }
     }
 
 

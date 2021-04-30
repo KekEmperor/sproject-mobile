@@ -11,12 +11,21 @@
     <string name="menu_activity_title">Меню</string>
     <string name="levels_activity_title">Показники та статистика</string>
     <string name="messages_activity_title">Ваші повідомлення</string>
-    <string name="levels_header">Перегляньте тут ваші показники та статистику про них!</string>
+    <string name="sender_activity_title">Надіслати показники</string>
+    <string name="critical_zones_activity_title">Критичні зони</string>
+    <string name="levels_header">Перегляньте тут ваші показники та статистику про них</string>
     <string name="week_average">Середнє значення рівня цукру в крові за останній тиждень</string>
     <string name="hour_average">Середнє значення рівня цукру на дану годину</string>
     <string name="date_time_formatter">dd.MM.yyyy HH:mm</string>
+    <string name="date_formatter">dd.MM.yyyy</string>
+    <string name="time_formatter">HH:mm</string>
     <string name="messages_header">Тут знаходяться повідомлення, що їх для вас залишив лікар - призначення, поради тощо</string>
     <string name="measurement_button">Надіслати показники</string>
     <string name="sender_header">Надішліть тут Ваш поточний рівень цукру в крові</string>
-    <string name="send">Надіслати</string>
+    <string name="send">Надіслати</string>\
+    <string name="crit_button">Критичні зони</string>
+    <string name="crit_header">Тут указані ваші останні критичні зони. Неодмінно зверніть на них увагу!</string>
+    <string name="crit_high">Критичне підвищення рівня цукру</string>
+    <string name="crit_low">Критичне зниження рівня цукру</string>
+    <string name="last_levels">Ваші останні показники</string>
 </resources>

@@ -18,9 +18,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        if (sp.getString("token", "") != "") {
+        /*if (sp.getString("token", "") != "") {
             moveToMenu(this)
-        }
+        }*/
 
         loginButton.setOnClickListener() {
             var status = ""

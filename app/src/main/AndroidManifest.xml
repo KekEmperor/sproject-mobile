@@ -13,7 +13,12 @@
         android:theme="@style/Theme.Sprojectmobile"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".CriticalZonesActivity"
+            android:label="@string/critical_zones_activity_title"
+            android:parentActivityName=".MenuActivity" />
+        <activity
             android:name=".SenderActivity"
+            android:label="@string/sender_activity_title"
             android:parentActivityName=".MenuActivity" />
         <activity
             android:name=".MessagesActivity"

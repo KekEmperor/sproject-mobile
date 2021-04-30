@@ -50,7 +50,6 @@ suspend fun getHourAverage(sp: SharedPreferences): Double {
             average = data.readText()
         }
 
-        Log.i("abobba", average)
         return average.toDouble()
     }
 }
@@ -70,5 +69,38 @@ suspend fun sendMeasurements(sp: SharedPreferences, level: String): String {
             return data.readText()
         }
         return ""
+    }
+}
+
+suspend fun getCriticalZones(sp: SharedPreferences): JSONArray {
+    HttpClient().use {
+        val data = it.get<HttpResponse>("http://10.0.2.2:30030/patient/critZones/" + sp.getString("patientId", "")) {
+            header("x-auth-token", sp.getString("token", ""))
+        }
+
+        var zones = JSONArray()
+
+        if (data.status == HttpStatusCode.OK) {
+            zones = JSONArray(data.readText())
+        }
+
+        return zones
+    }
+}
+
+suspend fun getLastLevels(sp: SharedPreferences): JSONArray {
+    HttpClient().use {
+        val data = it.get<HttpResponse>("http://10.0.2.2:30030/patient/getLastLevels/" + sp.getString("patientId", "")) {
+            header("x-auth-token", sp.getString("token", ""))
+        }
+
+        var levels = JSONArray()
+
+        Log.i("stat", data.status.toString())
+        if (data.status == HttpStatusCode.OK) {
+            levels = JSONArray(data.readText())
+        }
+
+        return levels
     }
 }
