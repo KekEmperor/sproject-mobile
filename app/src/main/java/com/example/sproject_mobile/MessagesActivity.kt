@@ -16,7 +16,6 @@ class MessagesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_messages)
         val sp = getSharedPreferences("idInfo", Context.MODE_PRIVATE)
 
-        // TODO: read messages as they render
         GlobalScope.launch(Dispatchers.IO) {
             val messages = getMessages(sp)
 

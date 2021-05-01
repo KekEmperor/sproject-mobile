@@ -26,6 +26,6 @@
     <string name="crit_button">Critical zones</string>
     <string name="crit_header">Here are your last critical zones. You must pay attention to them!</string>
     <string name="crit_high">Critically high blood sugar level</string>
-    <string name="crit_low">Critically high blood sugar level</string>
+    <string name="crit_low">Critically low blood sugar level</string>
     <string name="last_levels">Your last levels</string>
 </resources>
